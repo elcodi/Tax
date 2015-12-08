@@ -39,23 +39,22 @@ class TaxTest extends AbstractEntityTest
      * Return the fields to test in entities.
      *
      * [
-     *      [
+     *      [[
      *          "type" => $this::GETTER_SETTER,
      *          "getter" => "getValue",
      *          "setter" => "setValue",
      *          "value" => "Elcodi\Component\...\Interfaces\AnInterface"
      *          "nullable" => true
-     *      ],
-     *      [
+     *      ]],
+     *      [[
      *          "type" => $this::ADDER_REMOVER|$this::ADDER_REMOVER,
      *          "getter" => "getValue",
      *          "setter" => "setValue",
      *          "adder" => "addValue",
      *          "removed" => "removeValue",
-     *          "nullable" => false,
      *          "bag" => "collection", // can be array
      *          "value" => "Elcodi\Component\...\Interfaces\AnInterface"
-     *      ]
+     *      ]]
      * ]
      *
      * @return array Fields
@@ -63,27 +62,27 @@ class TaxTest extends AbstractEntityTest
     public function getTestableFields()
     {
         return [
-            [
+            [[
                 'type' => $this::GETTER_SETTER,
                 'getter' => 'getName',
                 'setter' => 'setName',
                 'value' => sha1(rand()),
                 'nullable' => false,
-            ],
-            [
+            ]],
+            [[
                 'type' => $this::GETTER_SETTER,
                 'getter' => 'getDescription',
                 'setter' => 'setDescription',
                 'value' => sha1(rand()),
                 'nullable' => false,
-            ],
-            [
+            ]],
+            [[
                 'type' => $this::GETTER_SETTER,
                 'getter' => 'getValue',
                 'setter' => 'setValue',
                 'value' => microtime(true),
                 'nullable' => false,
-            ],
+            ]],
         ];
     }
 
